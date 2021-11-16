@@ -7,7 +7,7 @@ error_reporting(0);
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-    <title>Mobile Phone Store||Track Order</title>
+    <title>Mobile Phone Store|Track Order</title>
 
     <!--Vendor CSS Files-->
     <link rel="stylesheet" href="assets/css/vendor/jquery-ui.min.css">
