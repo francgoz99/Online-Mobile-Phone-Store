@@ -1,4 +1,7 @@
 <?php
+// Kumar, A., 2021. Mobile Store Management System using PHP and MYSQL|PHPGurukul. [online video]. 25 August. Available from:
+// https://www.youtube.com/watch?v=EuVuSFGZ2F0&list=LL&index=44&t=562s [Accessed 2 October 2021].
+
 session_start();
 error_reporting(0);
 include_once ('includes/dbconnection.php');

@@ -1,4 +1,7 @@
 <?php
+// Kumar, A., 2021. Mobile Store Management System using PHP and MYSQL|PHPGurukul. [online video]. 25 August. Available from:
+// https://www.youtube.com/watch?v=EuVuSFGZ2F0&list=LL&index=44&t=562s [Accessed 2 October 2021].
+
 session_start();
 error_reporting(0);
 include_once ('includes/dbconnection.php');
@@ -11,7 +14,7 @@ if (strlen($_SESSION['msmsuid'])){
         $fnaobno=$_POST['flatbldgnumber'];
         $street=$_POST['streetname'];
         $area=$_POST['area'];
-        $landmark=$_POST['landmark'];
+        $lndmark=$_POST['landmark'];
         $city=$_POST['city'];
         $zipcode=$_POST['zipcode'];
         $phone=$_POST['phone'];
@@ -21,7 +24,7 @@ if (strlen($_SESSION['msmsuid'])){
         //generating order number
         $orderno= mt_rand(100000000, 999999999);
         $query="update tblorders set OrderNumber='orderno',IsOrderPlaced='1',CashonDelivery='$cod' where UserId='$userid' and IsOrderPlaced is null;";
-        $query.="insert into tblorderaddresses(UserId,Ordernumber,Flatnobuldngno,StreetName,Area,Landmark,City,Zipcode,Phone,Email) values('$userid','$orderno','$fnaobno','$street','$area','$landmark','$city','$zipcode','$phone','$email');";
+        $query.="insert into tblorderaddresses(UserId,Ordernumber,Flatnobuldngno,StreetName,Area,Landmark,City,Zipcode,Phone,Email) values('$userid','$orderno','$fnaobno','$street','$area','$lndmark','$city','$zipcode','$phone','$email');";
         $result=mysqli_multi_query($con, $query);
         if ($result){
             echo '<script>alert("Your order is placed successfully. Order number is"+"'.$orderno.'")</script>';
